@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up Form</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+		form {
+			background-color: #ffffff;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+			padding: 30px;
+			width: 400px;
+		}
+		h1 {
+			color: #333333;
+			font-size: 28px;
+			font-weight: bold;
+			margin: 0;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		label {
+			color: #333333;
+			display: block;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+		input[type="text"],
+		input[type="email"],
+		input[type="password"] {
+			border: none;
+			border-radius: 5px;
+			box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
+			display: block;
+			font-size: 16px;
+			margin-bottom: 20px;
+			padding: 10px;
+			width: 100%;
+		}
+		button[type="submit"] {
+			background-color: #333333;
+			border: none;
+			border-radius: 5px;
+			color: #ffffff;
+			cursor: pointer;
+			font-size: 16px;
+			padding: 10px;
+			width: 100%;
+		}
+		input[type="submit"]:hover {
+			background-color: #555555;
+		}
+		.error {
+			color: #ff0000;
+			font-size: 14px;
+			margin-top: 10px;
+			text-align: center;
+		}
+	</style>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+	<div class="container">
+		<form method="POST" action="signup.php">
+			<h1>JioKing Customer Sign Up</h1>
+			<label for="name">Name:</label>
+			<input type="text" name="name" required>
+			<label for="email">Email:</label>
+			<input type="email" name="email" required>
+			<label for="password">Password:</label>
+			<input type="password" name="password" required>
+			<div class="g-recaptcha" data-sitekey="6LdW8xAlAAAAAADWaBj_L-sOFY5g_n6e_CkLPkJd"></div>
+			<button type="submit" id="signup-btn">Sign Up</button>
+
+		</form>
+	</div>
+
+    <script>
+        document.getElementById("signup-btn").addEventListener("click", function() {
+            //alert("Congratulations, you have successfully signed up!");
+        });
+    </script>
+</body>
+</html>
